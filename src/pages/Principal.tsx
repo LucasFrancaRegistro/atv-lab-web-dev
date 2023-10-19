@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Contexto } from "../contexts/contexto"
-import TituloMega from "../components/tituloMega";
+import Megasena from "../components/Megasena";
+import Lotofacil from "../components/Lotofacil";
 
 export default function Principal() {
     const {megasena} = useContext(Contexto);
@@ -8,13 +9,12 @@ export default function Principal() {
 
     return (
         <div>
-            {/* <TituloMega variable={megasena} /> */}
         <div>
-            {JSON.stringify(megasena)}
+            <Megasena />
         </div>
         <br />
         <div>
-            {JSON.stringify(lotofacil)}
+            <Lotofacil />
         </div>
         </div>
     )

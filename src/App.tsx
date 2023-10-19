@@ -1,17 +1,14 @@
 import React from 'react';
 import GetMegaRes from './services/api';
 import { Provider } from './contexts/contexto';
-import TituloMega from './components/tituloMega';
+import Principal from './pages/Principal';
 
 
 function App() {
   return (
-    <div>
-      
     <Provider>
-      
+      <Principal />
     </Provider>
-    </div>
   );
 }
 

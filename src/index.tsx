@@ -8,9 +8,4 @@ import GetMegaRes from './services/api';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
-  <React.StrictMode>
-    <App />
-    
-  </React.StrictMode>
-);
+root.render(<App />);
