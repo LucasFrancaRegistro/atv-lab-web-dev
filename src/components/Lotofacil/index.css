@@ -1,0 +1,96 @@
+
+#loto-bloco-principal {
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    font-family: Roboto;
+    display: flex;
+}
+
+#loto-bloco-loteria {
+    display:flex;
+}
+
+#loto-bloco-direita {
+    margin-left: 50px;
+}
+
+#loto-valor-estimativa {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color:#930089; 
+}
+
+#loto-bloco-estimativa {
+    width: 15rem;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+#loto-data-concurso {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #4c556c;  
+}
+
+#container-loto{
+    background-color: orange;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    font-family: Roboto;
+    
+}
+
+#loto-texto-estimativa {
+    font-size: 0.9rem;
+    color: #4c556c;   
+}
+
+#loto-linha {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    color: #930089;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+#loto-linha2 {
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    color: #930089;
+    display: flex;
+}
+
+#loto-bola {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+
+
+#loto-texto-ganhadores {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0066b3;
+}
+
+#loto-texto-acumulou {
+    padding-left: 10px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0066b3;
+}
+
+#loto-nome-loteria {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    color:#930089;
+}
