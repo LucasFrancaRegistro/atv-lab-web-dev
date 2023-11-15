@@ -1,13 +1,15 @@
 import React from 'react';
-import { Provider } from './contexts/contexto';
-import Principal from './pages/Principal';
+import { BrowserRouter } from 'react-router-dom';
+import Menu from './components/Menu';
+import Rotas from './routes/Routes';
 
 
 function App() {
   return (
-    <Provider>
-      <Principal />
-    </Provider>
+    <BrowserRouter>
+      <Menu />
+      <Rotas />
+    </BrowserRouter>
   );
 }
 
