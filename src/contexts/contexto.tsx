@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { LoteriaProps, Props } from "../types";
 import loteria from "../services/Loteria";
-import Principal from "../pages/Principal";
 
 
 const Contexto = createContext({} as LoteriaProps);
@@ -21,7 +20,7 @@ function Provider({ children }: any) {
 
     return (
         <Contexto.Provider value={{ megasena, lotofacil, quina}}>
-            <Principal />
+            {children}
         </Contexto.Provider>
     )
 

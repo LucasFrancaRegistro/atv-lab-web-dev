@@ -1,15 +1,11 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Menu from './components/Menu';
 import Rotas from './routes/Routes';
-
+import { Provider } from './contexts/contexto';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Menu />
+    <Provider>
       <Rotas />
-    </BrowserRouter>
+    </Provider>
   );
 }
 
