@@ -1,12 +1,26 @@
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import NomeLoteria from '../NomeLoteria';
+import EstimativaComponent from '../Estimativa';
 
-
-
-function Esquerda() {
-    return (
-        <div>
-
-        </div>
-    )
+interface EsquerdaComponentProps {
+    logoSrc: string;
+    nomeTexto: string;
+    loteria: {
+        dataProximoConcurso: string;
+        valorEstimadoProximoConcurso: string;
+    };
 }
 
-export default Esquerda;
+const EsquerdaComponent: FC<EsquerdaComponentProps> = ({ logoSrc, nomeTexto, loteria}) => (
+    <Esquerda>
+        <NomeLoteria logoSrc={logoSrc} nomeTexto={nomeTexto}/>
+        <EstimativaComponent loteria={loteria} />
+                    
+    </Esquerda>
+);
+  
+const Esquerda = styled.div`
+`;
+
+export default EsquerdaComponent;

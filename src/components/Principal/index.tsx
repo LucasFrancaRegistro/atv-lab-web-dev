@@ -1,13 +1,33 @@
-import { useContexto } from "../../hooks";
+import React, { FC } from 'react';
 import styled from 'styled-components';
+import EsquerdaComponent from '../Esquerda';
+import DireitaComponent from '../Direita';
 
+interface PrincipalComponentProps {
+    logoSrc: string,
+    nomeTexto: string,
+    loteria: {
+        dataProximoConcurso: string;
+        valorEstimadoProximoConcurso: string;
+        quantidadeGanhadores: number;
+        dezenas: String[];
+        numeroDoConcurso: number;
+        dataPorExtenso: string;  
+    }
+}
 
-const BlocoPrincipal = styled.div`
-    border-bottom: 1px solid #ddd;
-    padding: 30px 0px;
-    font-family: Roboto;
+const PrincipalComponent: FC<PrincipalComponentProps> = ({ logoSrc, nomeTexto, loteria}) => (
+    <Principal>
+        <EsquerdaComponent logoSrc={logoSrc} nomeTexto={nomeTexto} loteria={loteria}/>
+        <DireitaComponent loteria={loteria}/>
+    </Principal>
+);
+  
+const Principal = styled.div`
     display: flex;
+    padding: 30px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: Roboto;
 `;
 
-export default BlocoPrincipal;
-
+export default PrincipalComponent;

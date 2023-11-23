@@ -1,8 +1,4 @@
-export interface LoteriaProps{
-    lotofacil: Props;
-    megasena: Props;
-    quina: Props;
-}
+
 
 export interface Props {
     acumulado: boolean;
@@ -15,7 +11,24 @@ export interface Props {
     quantidadeGanhadores: number;
     tipoPublicacao: number;
     tipoJogo: string;
-    valorEstimadoProximoConcurso: number;
+    valorEstimadoProximoConcurso: string;
     valorPremio: number
 
+}
+
+export interface LoteriaProps {
+    timemania: Props;
+    megasena: Props;
+    quina: Props;
+    tema: TemaProps;
+    setTema: (value: TemaProps) => void;
+}
+
+export interface TemaProps{
+    acumulou: string;
+    data: string;
+    estimativa: string;
+    loteria: string;
+    bola: string;
+    bolafonte: string;
 }

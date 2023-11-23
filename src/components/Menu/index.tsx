@@ -1,20 +1,64 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./index.css"
-import { useState } from "react";
+import "./index.css";
+import { useContexto } from "../../hooks";
+import { mega, quina, timemania } from "../../styles/themes";
 
-function Menu() {
-    const [activeLink, setActiveLink] = useState<string | null>(null);
+interface MenuProps {}
 
-    const handleLinkClick = (linkId: string) => {
-        setActiveLink(linkId);
-    }
-    return (
-        <div>
-            <Link to="megasena" className={activeLink ==="megasena"? "ativo":"megasena"} onClick={() => handleLinkClick("megasena")}>Megasena</Link>
-            <Link to="lotofacil" className={activeLink ==="lotofacil"? "ativo":"lotofacil"} onClick={() => handleLinkClick("lotofacil")}>Lotofácil</Link>
-            <Link to="quina" className={activeLink ==="quina"? "ativo":"quina"} onClick={() => handleLinkClick("quina")}>Quina</Link>
-        </div>
-    );
+export default function Menu({}: MenuProps) {
+  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const { setTema } = useContexto()
+  const handleLinkClick = (linkId: string) => {
+    setActiveLink(linkId);
+  };
+
+  return (
+    <div id="menu">
+      <Link
+        id="mega"
+        to="megasena"
+        style={{
+          color: activeLink === "mega" ? "#aaa" : "#209869",
+          pointerEvents: activeLink === "mega" ? "none" : "auto",
+        }}
+        onClick={() => {
+          handleLinkClick("mega");
+          setTema(mega)
+        }}
+      >
+        <strong>Megasena</strong>
+      </Link>
+
+      <Link
+        id="time"
+        to="timemania"
+        style={{
+          color: activeLink === "time" ? "#aaa" : "#00ff48",
+          pointerEvents: activeLink === "time" ? "none" : "auto",
+        }}
+        onClick={() => {
+          handleLinkClick("time");
+          setTema(timemania)
+        }}
+      >
+        <strong>Timemania</strong>
+      </Link>
+
+      <Link
+        id="quina"
+        to="quina"
+        style={{
+          color: activeLink === "quina" ? "#aaa" : "#260085",
+          pointerEvents: activeLink === "quina" ? "none" : "auto",
+        }}
+        onClick={() => {
+          handleLinkClick("quina");
+          setTema(quina)
+        }}
+      >
+        <strong>Quina</strong>
+      </Link>
+    </div>
+  );
 }
-
-export default Menu;

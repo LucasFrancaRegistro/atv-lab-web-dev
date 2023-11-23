@@ -1,34 +1,12 @@
-
-
-.megasena {
-    color: #209869;
-    padding-left: 10px;
-    font-size: 1.8rem;
-    font-family: roboto;
+#menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vh 2vw;
+    gap: 20px;
 }
 
-.lotofacil {
-    color: #930089;
-    padding-left: 10px;
-    font-size: 1.8rem;
-    font-family: roboto;
-}
-
-.quina {
-    color: #260085;
-    padding-left: 10px;
-    font-size: 1.8rem;
-    font-family: roboto;
-}
-
-.ativo {
-    color: #ddd;
-    pointer-events: none;
-    padding-left: 10px;
-    font-size: 1.8rem;
-    font-family: roboto;
-}
-
-a:visited, a:link {
+#menu a{
     text-decoration: none;
+    font-family: Roboto;
+    font-size: 1rem;
 }
