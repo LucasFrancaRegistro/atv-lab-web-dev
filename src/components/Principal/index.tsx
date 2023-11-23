@@ -1,15 +1,13 @@
 import { useContexto } from "../../hooks";
+import styled from 'styled-components';
 
 
-function Principal() {
-    return (
-        <div>
-            oi
-        </div>
-    );
-}
+const BlocoPrincipal = styled.div`
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    font-family: Roboto;
+    display: flex;
+`;
 
-
-
-export default Principal;
+export default BlocoPrincipal;
 

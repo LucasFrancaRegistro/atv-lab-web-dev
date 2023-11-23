@@ -1,5 +1,5 @@
 import Carregando from "../components/Carregando/Carregando";
-import Principal from "../components/Principal";
+import BlocoPrincipal from "../components/Principal";
 import useContexto from "../hooks/useContexto";
  
 
@@ -11,9 +11,9 @@ function Megasena() {
         <>
             { megasena.dataApuracao ?
                     (
-                        <Principal>
+                        <BlocoPrincipal>
                             
-                        </Principal>
+                        </BlocoPrincipal>
                     ) :
                     (<Carregando />)
             }  
